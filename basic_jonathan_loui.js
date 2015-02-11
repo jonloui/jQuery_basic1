@@ -50,7 +50,8 @@ $(document).ready(function() {
 	});
 
 	$("#menu form button").click(function() {
-		if($("#menu form select[name=team]").val() == "San Francisco 49ers") {
+		var team_name = $("#menu form select[name=team]").val();
+		if(team_name == "San Francisco 49ers") {
 		//	also works, identifies the first css style for the first p element
 		// if($("#san_francisco>p")[0].style.cssText == "display: block;")
 			if($("#san_francisco p").css("display") == "block")
@@ -58,31 +59,31 @@ $(document).ready(function() {
 			else
 				$("#san_francisco").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
 		}
-		else if ($("#menu form select[name=team]").val() == "Seattle Seahawks") {
+		else if (team_name == "Seattle Seahawks") {
 			if($("#seattle p").css("display") == "block")
 				$("#seattle").append("<p style='display:block;'>" + $("#new_name").val() + "</p>");
 			else
 				$("#seattle").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
 		}
-		else if ($("#menu form select[name=team]").val() == "New England Patriots") {
+		else if (team_name == "New England Patriots") {
 			if($("#patriots p").css("display") == "block")
 				$("#patriots").append("<p style='display:block;'>" + $("#new_name").val() + "</p>");
 			else
 				$("#patriots").append("<p style='display: none;'>" + $("#new_name").val() + "</p>");
 		}
-		else if ($("#menu form select[name=team]").val() == "Denver Broncos") {
+		else if (team_name == "Denver Broncos") {
 			if($("#broncos p").css("display") == "block")
 				$("#broncos").append("<p style='display: block'>" + $("#new_name").val() + "</p>");
 			else
 				$("#broncos").append("<p style='display: none'>" + $("#new_name").val() + "</p>");
 		}
-		else if ($("#menu form select[name=team]").val() == "Arizona Cardinals") {
+		else if (team_name == "Arizona Cardinals") {
 			if($("#arizona p").css("display") == "block")
 				$("#arizona").append("<p style='display: block;'>" + $("#new_name").val() + "</p>");
 			else
 				$("#arizona").append("<p style='display: none;'>" + $("#new_name").val() + "</p>");
 		}
-		else if ($("#menu form select[name=team]").val() == "St. Louis Rams") {
+		else if (team_name == "St. Louis Rams") {
 			if($("#st_louis p").css("display") == "block")
 				$("#st_louis").append("<p style='display: block;'>" + $("#new_name").val() + "</p>");
 			else
