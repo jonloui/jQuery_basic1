@@ -1,5 +1,3 @@
-/*************   PLAYERS WILL NOT APPEND CORRECTLY WHEN PLAYERS ARE SHOWING   *******************/
-
 $(document).ready(function() {
 	var head = "#header h1";
 	/*
@@ -53,22 +51,42 @@ $(document).ready(function() {
 
 	$("#menu form button").click(function() {
 		if($("#menu form select[name=team]").val() == "San Francisco 49ers") {
-			$("#san_francisco").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
+		//	also works, identifies the first css style for the first p element
+		// if($("#san_francisco>p")[0].style.cssText == "display: block;")
+			if($("#san_francisco p").css("display") == "block")
+				$("#san_francisco").append("<p style='display:block;'>" + $("#new_name").val() + "</p>");
+			else
+				$("#san_francisco").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
 		}
 		else if ($("#menu form select[name=team]").val() == "Seattle Seahawks") {
-			$("#seattle").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
+			if($("#seattle p").css("display") == "block")
+				$("#seattle").append("<p style='display:block;'>" + $("#new_name").val() + "</p>");
+			else
+				$("#seattle").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
 		}
 		else if ($("#menu form select[name=team]").val() == "New England Patriots") {
-			$("#patriots").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
+			if($("#patriots p").css("display") == "block")
+				$("#patriots").append("<p style='display:block;'>" + $("#new_name").val() + "</p>");
+			else
+				$("#patriots").append("<p style='display: none;'>" + $("#new_name").val() + "</p>");
 		}
 		else if ($("#menu form select[name=team]").val() == "Denver Broncos") {
-			$("#broncos").append("<p style='display: none'>" + $("#new_name").val() + "</p>");
+			if($("#broncos p").css("display") == "block")
+				$("#broncos").append("<p style='display: block'>" + $("#new_name").val() + "</p>");
+			else
+				$("#broncos").append("<p style='display: none'>" + $("#new_name").val() + "</p>");
 		}
 		else if ($("#menu form select[name=team]").val() == "Arizona Cardinals") {
-			$("#arizona").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
+			if($("#arizona p").css("display") == "block")
+				$("#arizona").append("<p style='display: block;'>" + $("#new_name").val() + "</p>");
+			else
+				$("#arizona").append("<p style='display: none;'>" + $("#new_name").val() + "</p>");
 		}
 		else if ($("#menu form select[name=team]").val() == "St. Louis Rams") {
-			$("#st_louis").append("<p style='display:none;'>" + $("#new_name").val() + "</p>");
+			if($("#st_louis p").css("display") == "block")
+				$("#st_louis").append("<p style='display: block;'>" + $("#new_name").val() + "</p>");
+			else
+				$("#st_louis").append("<p style='display: none;'>" + $("#new_name").val() + "</p>");
 		}
 		
 	});
