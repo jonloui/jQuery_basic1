@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- By: Jonathan Loui
+  Date: 2/10/2015
+  Assignment: JQuery Basic 1
+  ************************************************************
+  PLAYERS WILL NOT APPEND CORRECTLY WHEN PLAYERS ARE SHOWING
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basics 1</title>
+	<meta name="description" content="JQuery, Basics 1" />
+	<link rel="stylesheet" type="text/css" href="normalize.css" />
+	<link rel="stylesheet" type="text/css" href="basic_jonathan_loui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="basic_jonathan_loui.js"></script>
+</head>
+<body>
+	<div id="header">
+		<img src="nfc.gif" alt="nfc image" id="nfc">
+		<h1>NFL Football Teams</h1>
+		<img src="afc.gif" alt="afc image" id="afc">
+	</div>
+
+	<div id="menu">
+		<form>
+			<label>Change title: <input type="text" value="Enter here" />
+			</label>
+			<select name="title_option">
+				<option>default</option>
+				<option>text</option>
+				<option>html</option>
+			</select>
+
+			<label>Enter player: <input type="text" value="Enter Name and Position" id="new_name" />
+			</label>
+			<select name="team">
+				<option>San Francisco 49ers</option>
+				<option>Seattle Seahawks</option>
+				<option>New England Patriots</option>
+				<option>Denver Broncos</option>
+			</select>
+			<button type="button" id="add_player">Add player</button>
+		</form>
+		<h5>List of Links(click)</h5>
+		<p>How fast are you?</p>
+		<ul>
+			<li><a href="http://sports.yahoo.com/nfl/">Yahoo Sports</a></li>
+			<li><a href="http://www.49ers.com/">49ers Website</a></li>
+			<li><a href="http://nfl.com">NFL</a></li>
+		</ul>
+
+		<h4>Add teams</h4>
+		<select name="new_team">
+			<option>Arizona Cardinals</option>
+			<option>St. Louis Rams</option>
+		</select>
+		<button type="button" id="add_team">Add Team</button>
+
+		<p>Click for effect: <span>Didn't have a good idea for this</span></p>
+	</div>
+
+	<div id="content_nfc" class="content">
+		<div id="san_francisco" class="nfc_team">
+			<h2>San Francisco 49ers</h2>
+			<p>Colin Kaepernick QB</p>
+			<p>Anquan Boldin WR</p>
+			<p>Michael Crabtree WR</p>
+			<p>Patrick Willis LB</p>
+		</div>
+		<div id="seattle" class="nfc_team">
+			<h2>Seattle Seahawks</h2>
+			<p>Russell Wilson QB</p>
+			<p>Marshawn Lynch RB</p>
+			<p>Doug Baldwin WR</p>
+		</div>
+	</div>
+
+	<div id="content_afc" class="content">
+		<div id="patriots" class="afc_team">
+			<h2>New England Patriots</h2>
+			<p>Tom Brady QB</p>
+			<p>LeGarrette Blount RB</p>
+			<p>Brandon LaFell WR</p>
+		</div>
+		<div id="broncos" class="afc_team">
+			<h2>Denver Broncos</h2>
+			<p>Peyton Manning QB</p>
+			<p>C.J. Anderson RB</p>
+			<p>Demaryius Thomas WR</p>
+		</div>
+	</div>
+</body>
+</html>

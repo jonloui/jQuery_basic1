@@ -1,0 +1,78 @@
+body {
+	font-family: cursive;
+	height: 1000px;
+	margin: 0px auto;
+	padding: 0px;
+	width: 1010px;
+}
+
+/***** Header Section *****/
+#header {
+	width: 1010px;
+}
+
+#header * {
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+#header img {
+	height: 200px;
+	width: 200px;
+}
+
+#header h1 {
+	text-align: center;
+	width: 600px;
+}
+
+.backgroundcolor {
+	background-color: green;
+}
+
+/***** Menu Section *****/
+#menu, .content {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#menu {
+	height: 600px;
+	padding: 10px;
+	width: 200px;
+
+}
+
+label {
+	display: block;
+}
+
+#menu h5, #menu p, .nfc_team, .afc_team {
+	cursor: pointer;
+}
+
+/***** Content Section *****/
+.content {
+	height: 600px;
+	padding: 10px;
+	width: 360px;
+
+}
+
+.nfc_team {
+	border: 5px blue ridge;
+	text-align: center;
+}
+
+.afc_team {
+	border: 5px red ridge;
+	text-align: center;
+}
+
+.nfc_team p, .afc_team p {
+	display: none;
+}
